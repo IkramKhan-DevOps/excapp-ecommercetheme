@@ -31,13 +31,11 @@ comments in your code wherever possible.
 
 ## VERSION 2
 
-In this assignment, you are required to prepare a comprehensive client-side interface for a
-Web Application. You are free to choose any web application of your liking or the application
-which you see can easily demonstrate majority of features or techniques being discussed in
-this module. You can take inspiration from the list of applications presented in the lecture but
-you are not limited to any of those applications. You are strongly encouraged to carefully select
-your web application considering that you will be further enhancing the same assignment
-introducing additional features as the semester goes by. 
+n this assignment, you are required to extend the client-side interface for your Web application
+submitted as Assignment 1. You are required to introduce Java Script and related technologies 
+learnt during Lecture 3 and Lecture 4 to enhance client-side interface for your web application. 
+You also need to demonstrate good Java Script programming/scripting skills for processing 
+HTML/CSS document, dynamic content generation, event handling and local data processing.
 
 - ntroduce a dynamic menu bar on top and/or side panel of your web application. The 
 menu bar should only appear after a client-side event (click, mouse over etc.) is 
