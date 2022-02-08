@@ -6,12 +6,28 @@
 ## more like alibaba, some like amazon
 
 
-Ecommerce Application prototype with 4 updates
+In this assignment, you are required to prepare a comprehensive client-side interface for a
+Web Application. You are free to choose any web application of your liking or the application
+which you see can easily demonstrate majority of features or techniques being discussed in
+this module. You can take inspiration from the list of applications presented in the lecture but
+you are not limited to any of those applications. You are strongly encouraged to carefully select
+your web application considering that you will be further enhancing the same assignment
+introducing additional features as the semester goes by. 
 
 ## Features
- - Learning of html, css, js, JQuerry, SQL, PHP etc
- - Ecommerce understanding
- - ✨Magic ✨
+- Demonstrate a complete understanding of Web Application types and their
+requirements.
+- Prepare and showcase important information collection and presentation for
+your selected application.
+- Use a broad range of HTML tags and HTML 5 features.
+- Demonstrate ability to design an easy to navigate user interface and visually
+appealing to a variety of audience.
+- Design and implement different types of CSS files for your web application
+interface.
+- Demonstrate effective use of CSS for your web application using a broad range
+of CSS rules.
+- Demonstrate your understanding of the HTML and CSS code by adding
+comments in your code wherever possible. 
 
 ## Tech
 
