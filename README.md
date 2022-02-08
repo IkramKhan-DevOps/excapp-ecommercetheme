@@ -14,7 +14,7 @@ you are not limited to any of those applications. You are strongly encouraged to
 your web application considering that you will be further enhancing the same assignment
 introducing additional features as the semester goes by. 
 
-## Features
+## VERSION 1
 - Demonstrate a complete understanding of Web Application types and their
 requirements.
 - Prepare and showcase important information collection and presentation for
