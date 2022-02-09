@@ -2,127 +2,309 @@
 <html lang="en">
 
 <head>
-<meta charset="utf-8">
-<meta http-equiv="pragma" content="no-cache" />
-<meta http-equiv="cache-control" content="max-age=604800" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="cache-control" content="max-age=604800" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>Holland EC | Register</title>
+	<title>Holland EC | Register</title>
 
-<link href="images/logo3661.png" rel="shortcut icon" type="image/x-icon">
+	<link href="images/logo3661.png" rel="shortcut icon" type="image/x-icon">
 
-<!-- jQuery -->
-<script src="js/jquery-2.0.0.min.js" type="text/javascript"></script>
+	<!-- jQuery -->
+	<script src="js/jquery-2.0.0.min.js" type="text/javascript"></script>
 
-<!-- Bootstrap4 files-->
-<script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+	<!-- Bootstrap4 files-->
+	<script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
 
-<!-- Font awesome 5 -->
-<link href="fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+	<!-- Font awesome 5 -->
+	<link href="fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
 
-<!-- custom style -->
-<link href="css/ui.css" rel="stylesheet" type="text/css"/>
-<link href="css/responsive.css" rel="stylesheet" type="text/css" />
+	<!-- custom style -->
+	<link href="css/ui.css" rel="stylesheet" type="text/css" />
+	<link href="css/responsive.css" rel="stylesheet" type="text/css" />
 
-<!-- custom javascript -->
-<script src="js/script.js" type="text/javascript"></script>
+	<!-- custom javascript -->
+	<script src="js/script.js" type="text/javascript"></script>
 
 </head>
+
 <body>
 
-<!-- ========================= SECTION CONTENT ========================= -->
-<section class="section-content padding-y">
+	<!-- ========================= SECTION CONTENT ========================= -->
+	<section class="section-content padding-y">
 
-<!-- ============================ COMPONENT REGISTER   ================================= -->
-	<div class="card mx-auto" style="max-width:520px; margin-top:40px;">
-      <article class="card-body">
-		<header class="mb-4"><h4 class="card-title">Sign up</h4></header>
-		<form>
-				<div class="form-row">
-					<div class="col form-group">
-						<label>First name</label>
-					  	<input type="text" class="form-control" placeholder="">
+		<!-- ============================ COMPONENT REGISTER   ================================= -->
+		<div class="card mx-auto" style="max-width:520px; margin-top:40px;">
+			<article class="card-body">
+				<header class="mb-4">
+					<h4 class="card-title">Sign up</h4>
+					<small class="form-text text-danger p-2 border border-danger rounded " id="allError"></small>
+				</header>
+				<form>
+
+					<!-- FNAME AND LNAME -->
+					<div class="form-row">
+						<div class="col form-group">
+							<label>First name</label>
+							<input type="text" id="fname" name="fname" class="form-control" placeholder="" required>
+						</div>
+						<div class="col form-group">
+							<label>Last name</label>
+							<input type="text" id="lname" name="lname" class="form-control" placeholder="" required>
+						</div>
+					</div>
+
+					<!-- EMAIL AND PASSWORD -->
+					<div class="form-group">
+						<label>Email</label>
+						<input type="email" id="email" name="email" class="form-control" placeholder="">
+						<small class="form-text text-muted" id="emailError">We'll never share your email with anyone
+							else.</small>
+					</div>
+					<div class="form-row">
+						<div class="col form-group">
+							<label>Password</label>
+							<input type="password" id="pass" name="pass" class="form-control" placeholder="" required>
+							<small class="form-text text-muted" id="passError">8 chars long contains 0-9A-z</small>
+						</div>
+						<div class="col form-group">
+							<label>Confirm Password</label>
+							<input type="password" id="cpass" name="cpass" class="form-control" placeholder="" required>
+							<small class="form-text text-muted" id="cpassError">Must be same to previous
+								password</small>
+						</div>
+					</div>
+
+					<!-- GENDER -->
+					<div class="form-group">
+						<label class="custom-control custom-radio custom-control-inline">
+							<input class="custom-control-input" checked="" id="gender1" type="radio" name="gender"
+								value="male">
+							<span class="custom-control-label"> Male </span>
+						</label>
+						<label class="custom-control custom-radio custom-control-inline">
+							<input class="custom-control-input" type="radio" id="gender" name="gender" value="female">
+							<span class="custom-control-label"> Female </span>
+						</label>
+					</div>
+
+					<!-- AGE AND COUNTRY -->
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label>Age</label>
+							<input type="number" id="age" name="age" class="form-control">
+						</div>
+						<div class="form-group col-md-6">
+							<label>Country</label>
+							<select id="country" name="country" class="form-control">
+								<option value="uzbakistan">Uzbekistan</option>
+								<option value="russia">Russia</option>
+								<option value="holland" selected="">Holland</option>
+								<option value="india">India</option>
+								<option value="usa">USA</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label>Full Address</label>
+						<textarea id="address" name="address" class="form-control"></textarea>
+					</div>
+
+					<div class="form-group">
+						<button id="register" name="register" type="button" class="btn btn-primary btn-block"> Register
+							</a>
+					</div> <!-- form-group// -->
+					<div class="form-group">
+						<label class="custom-control custom-checkbox"> <input type="checkbox"
+								class="custom-control-input" checked="">
+							<div class="custom-control-label"> I am agree with <a href="#">terms and contitions</a>
+							</div>
+						</label>
 					</div> <!-- form-group end.// -->
-					<div class="col form-group">
-						<label>Last name</label>
-					  	<input type="text" class="form-control" placeholder="">
-					</div> <!-- form-group end.// -->
-				</div> <!-- form-row end.// -->
-				<div class="form-group">
-					<label>Email</label>
-					<input type="email" class="form-control" placeholder="">
-					<small class="form-text text-muted">We'll never share your email with anyone else.</small>
-				</div> <!-- form-group end.// -->
-				<div class="form-group">
-					<label class="custom-control custom-radio custom-control-inline">
-					  <input class="custom-control-input" checked="" type="radio" name="gender" value="option1">
-					  <span class="custom-control-label"> Male </span>
-					</label>
-					<label class="custom-control custom-radio custom-control-inline">
-					  <input class="custom-control-input" type="radio" name="gender" value="option2">
-					  <span class="custom-control-label"> Female </span>
-					</label>
-				</div> <!-- form-group end.// -->
-				<div class="form-row">
-					<div class="form-group col-md-6">
-					  <label>City</label>
-					  <input type="text" class="form-control">
-					</div> <!-- form-group end.// -->
-					<div class="form-group col-md-6">
-					  <label>Country</label>
-					  <select id="inputState" class="form-control">
-					    <option> Choose...</option>
-					      <option>Uzbekistan</option>
-					      <option>Russia</option>
-					      <option selected="">United States</option>
-					      <option>India</option>
-					      <option>Afganistan</option>
-					  </select>
-					</div> <!-- form-group end.// -->
-				</div> <!-- form-row.// -->
-				<div class="form-row">
-					<div class="form-group col-md-6">
-						<label>Create password</label>
-					    <input class="form-control" type="password">
-					</div> <!-- form-group end.// --> 
-					<div class="form-group col-md-6">
-						<label>Repeat password</label>
-					    <input class="form-control" type="password">
-					</div> <!-- form-group end.// -->  
-				</div>
-			    <div class="form-group">
-			        <a href="login.html" type="submit" class="btn btn-primary btn-block"> Register </a>
-			    </div> <!-- form-group// -->      
-			    <div class="form-group"> 
-		            <label class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input" checked=""> <div class="custom-control-label"> I am agree with <a href="#">terms and contitions</a>  </div> </label>
-		        </div> <!-- form-group end.// -->           
-			</form>
-		</article><!-- card-body.// -->
-    </div> <!-- card .// -->
-    <p class="text-center mt-4">Have an account? <a href="login.html">Log In</a></p>
-    <br><br>
-<!-- ============================ COMPONENT REGISTER  END.// ================================= -->
+				</form>
+			</article><!-- card-body.// -->
+		</div> <!-- card .// -->
+		<p class="text-center mt-4">Have an account? <a href="login.html">Log In</a></p>
+		<br><br>
+		<!-- ============================ COMPONENT REGISTER  END.// ================================= -->
 
 
-</section>
-<!-- ========================= SECTION CONTENT END// ========================= -->
+	</section>
+	<!-- ========================= SECTION CONTENT END// ========================= -->
 
 
 
-<!-- ========================= FOOTER ========================= -->
-<footer class="section-footer bg-secondary">
-	<div class="container">
-		<section class="footer-bottom text-center">
-		
+	<!-- ========================= FOOTER ========================= -->
+	<footer class="section-footer bg-secondary">
+		<div class="container">
+			<section class="footer-bottom text-center">
+
 				<p class="text-white">Project Under Development by Aizaz - Part 1</p>
 				<p class="text-muted"> &copy 2022 Holland EC, All rights reserved </p>
-		</section>
-	</div><!-- //container -->
-</footer>
-<!-- ========================= FOOTER END // ========================= -->
+			</section>
+		</div><!-- //container -->
+	</footer>
+	<!-- ========================= FOOTER END // ========================= -->
 
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/my.js"></script>
 </body>
 
 </html>
+<script>
+
+	$(document).ready(function () {
+
+		let allError = $('#allError');
+		let emailError = $('#emailError');
+		let cpassError = $('#cpassError');
+		let passError = $('#passError');
+
+		allError.hide();
+
+		let _fname = $('#fname');
+		let _lname = $('#lname');
+		let _email = $('#email');
+		let _pass = $('#pass');
+		let _cpass = $('#cpass');
+		let _gender = $('#gender');
+		let _age = $('#age');
+		let _country = $('#country');
+		let _address = $('#address');
+
+		let register = $('#register');
+
+		/*
+		----------------------------------------------------------------------------------------
+		EVENTS
+		----------------------------------------------------------------------------------------
+		*/
+
+		// REGISTER EVENT
+		register.click(function () {
+
+			if (fieldsAreNotEmpty()) {
+				if (validateEmail) {
+					if (validatePassword) {
+						if (validateConfirmPassword) {
+							allError.hide();
+							window.localStorage.setItem('fname', _fname.val());
+							window.localStorage.setItem('lname', _lname.val());
+							window.localStorage.setItem('email', _email.val());
+							window.localStorage.setItem('password', _pass.val());
+							window.localStorage.setItem('country', _country.val());
+							window.localStorage.setItem('gender', _gender.val());
+						} else {
+							allError.text('Password and Confirm Password Field Does not Matched.');
+							allError.show();
+						}
+					} else {
+						allError.text('Password must be 8 characters long contains 0-9A-Za-z@$%^$%.');
+						allError.show();
+					}
+				} else {
+					allError.text('Email is in-correct please follow the correct format.');
+					allError.show();
+				}
+
+			} else {
+				allError.text('Please Fill all the Fields below.');
+				allError.show();
+			}
+		});
+
+		// EMAIL VERFIY EVENT
+		_email.keyup(function(){
+			value = $(this).val()
+			if(validateEmail()){
+				emailError.addClass('text-success')
+				emailError.removeClass('text-danger')
+				emailError.removeClass('text-muted')
+				emailError.text('Email format correct');
+			}else{
+				emailError.addClass('text-danger')
+				emailError.removeClass('text-success')
+				emailError.removeClass('text-muted')
+				emailError.text('Email is incorrect - please follow proper format.');
+			}
+		});
+
+        // EMAIL VERFIY EVENT
+		_pass.keyup(function(){
+			value = $(this).val()
+			if(validatePassword()){
+				passError.addClass('text-success')
+				passError.removeClass('text-danger')
+				passError.removeClass('text-muted')
+				passError.text('Proper password created and accepted.');
+			}else{
+				passError.addClass('text-danger')
+				passError.removeClass('text-success')
+				passError.removeClass('text-muted')
+				passError.text('7 chars long contains 0-9A-z and Special Characters');
+			}
+		});
+
+		_cpass.keyup(function(){
+			value = $(this).val()
+			if(validateConfirmPassword()){
+				cpassError.addClass('text-success')
+				cpassError.removeClass('text-danger')
+				cpassError.removeClass('text-muted')
+				cpassError.text('Passwords matched.');
+			}else{
+				cpassError.addClass('text-danger')
+				cpassError.removeClass('text-success')
+				cpassError.removeClass('text-muted')
+				cpassError.text('Password doesn not matched!');
+			}
+		});
+
+		/*
+		----------------------------------------------------------------------------------------
+		FUNCTIONS
+		----------------------------------------------------------------------------------------
+		*/
+
+		// FUNCTION: check all the fields are empty or not.
+		function fieldsAreNotEmpty() {
+			if (isNullOrEmpty(_fname.val()) || isNullOrEmpty(_lname.val()) ||
+				isNullOrEmpty(_email.val()) || isNullOrEmpty(_pass.val()) ||
+				isNullOrEmpty(_age.val()) || isNullOrEmpty(_country.val()) ||
+				isNullOrEmpty(_cpass.val())) {
+				return false
+			}
+			return true
+		}
+
+
+		function validateEmail() {
+			var formatRules = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			if (_email.val().match(formatRules)) {
+				return true
+			}
+			return false
+		}
+
+		function validatePassword() {
+			var formatRules = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+			if (formatRules.test(_pass.val())) {
+				return true
+			}
+			return false
+		}
+
+		function validateConfirmPassword() {
+			if (_pass.val() === _cpass.val()) {
+				return true
+			}
+			return false
+		}
+
+
+	});
+</script>
