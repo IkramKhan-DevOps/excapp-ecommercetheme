@@ -67,7 +67,7 @@
 						<div class="col form-group">
 							<label>Password</label>
 							<input type="password" id="pass" name="pass" class="form-control" placeholder="" required>
-							<small class="form-text text-muted" id="passError">8 chars long contains 0-9A-z</small>
+							<small class="form-text text-muted" id="passError">8 chars long must contains 1 no and 1 special char</small>
 						</div>
 						<div class="col form-group">
 							<label>Confirm Password</label>
@@ -191,6 +191,7 @@
 				if (validateEmail) {
 					if (validatePassword) {
 						if (validateConfirmPassword) {
+							
 							allError.hide();
 							window.localStorage.setItem('fname', _fname.val());
 							window.localStorage.setItem('lname', _lname.val());
@@ -198,6 +199,9 @@
 							window.localStorage.setItem('password', _pass.val());
 							window.localStorage.setItem('country', _country.val());
 							window.localStorage.setItem('gender', _gender.val());
+							
+							alert('User registered successfully.')
+
 						} else {
 							allError.text('Password and Confirm Password Field Does not Matched.');
 							allError.show();
@@ -233,7 +237,7 @@
 			}
 		});
 
-        // EMAIL VERFIY EVENT
+        // PASS CHECK EVENT
 		_pass.keyup(function(){
 			value = $(this).val()
 			if(validatePassword()){
@@ -245,10 +249,11 @@
 				passError.addClass('text-danger')
 				passError.removeClass('text-success')
 				passError.removeClass('text-muted')
-				passError.text('7 chars long contains 0-9A-z and Special Characters');
+				passError.text('8 chars long must contains 1 no and 1 special char');
 			}
 		});
 
+		// CONFIRM PASS CHECK EVENT
 		_cpass.keyup(function(){
 			value = $(this).val()
 			if(validateConfirmPassword()){
@@ -282,6 +287,7 @@
 		}
 
 
+		// FUNCTION: email validations.
 		function validateEmail() {
 			var formatRules = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 			if (_email.val().match(formatRules)) {

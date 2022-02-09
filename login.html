@@ -41,7 +41,7 @@
       <div class="card-body">
         <h4 class="card-title mb-4">Sign in</h4>
         <div class="form-group">
-          <input name="" class="form-control" placeholder="Username" type="text" id="username">
+          <input name="" class="form-control" placeholder="email" type="email" id="email">
         </div> <!-- form-group// -->
         <div class="form-group">
           <input name="" class="form-control" placeholder="Password" type="password" id="password">
@@ -89,27 +89,28 @@
 <script>
 
   $(document).ready(function () {
+    console.log(window.localStorage)
     $('#login').click(function () {
 
-      let username = $('#username').val();
+      let email = $('#email').val();
       let password = $('#password').val();
 
-      // USERNAME CHECK ISEMPTY
-      if (!isNullOrEmpty(username)) {
+      // email CHECK ISEMPTY
+      if (!isNullOrEmpty(email)) {
 
         // PASSWORD CHECK ISEMPTY
         if (!isNullOrEmpty(password)) {
 
           // IF LOCAL STORAGE SETTED
-          if (!isEmptyNullOrNoStorage('username') && !isEmptyNullOrNoStorage('password')) {
+          if (!isEmptyNullOrNoStorage('email') && !isEmptyNullOrNoStorage('password')) {
 
-            // USERNAME AND PASSWORD CHECK
-            if (username == getStoredValue('username') && username == getStoredValue('ss')) {
+            // email AND PASSWORD CHECK
+            if (email == getStoredValue('email') && password == getStoredValue('password')) {
 
-
+              alert("Welcome Mr. "+ getStoredValue('fname') + " " + getStoredValue('lname'))
 
             } else {
-              alert("Username or Password is Wrong.")
+              alert("Email or Password is Wrong.")
             }
 
           } else {
@@ -120,7 +121,7 @@
           alert("Password must not be null or empty.")
         }
       } else {
-        alert("Username must not be null or empty.")
+        alert("email must not be null or empty.")
       }
 
     });
