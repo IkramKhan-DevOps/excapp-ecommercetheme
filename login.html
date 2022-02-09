@@ -77,7 +77,10 @@
         <p class="text-white">Project Under Development by Aizaz - Part 1</p>
         <p class="text-muted"> &copy 2022 Holland EC, All rights reserved </p>
       </section>
-    </div><!-- //container -->
+    </div>
+    <section class="mt-5" id="domTree">
+
+    </section>
   </footer>
   <!-- ========================= FOOTER END // ========================= -->
 
@@ -89,7 +92,11 @@
 <script>
 
   $(document).ready(function () {
-    console.log(window.localStorage)
+    
+    let domTree = $('#domTree');
+    let children = $('body').children()
+    domTree.text($('footer').children().css({"color": "red", "border": "2px solid red"}));
+
     $('#login').click(function () {
 
       let email = $('#email').val();
@@ -107,7 +114,7 @@
             // email AND PASSWORD CHECK
             if (email == getStoredValue('email') && password == getStoredValue('password')) {
 
-              alert("Welcome Mr. "+ getStoredValue('fname') + " " + getStoredValue('lname'))
+              alert("Welcome Mr. " + getStoredValue('fname') + " " + getStoredValue('lname'))
 
             } else {
               alert("Email or Password is Wrong.")
