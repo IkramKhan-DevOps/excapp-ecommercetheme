@@ -1,0 +1,54 @@
+{
+    "products": [
+        {
+            "name": "Men's T-shirt for summer",
+            "category": "Clothes",
+            "image": "images/items/1.jpg",
+            "price": "19"
+        },{
+            "name": "Winter Jacket for Men, All sizes",
+            "category": "Clothes",
+            "image": "images/items/2.jpg",
+            "price": "20"
+        },{
+            "name": "Jeans Shorts for Boys Small size",
+            "category": "Clothes",
+            "image": "images/items/3.jpg",
+            "price": "21"
+        },{
+            "name": "Jeans XP Shorts for Boys",
+            "category": "Clothes",
+            "image": "images/items/4.jpg",
+            "price": "22"
+        },{
+            "name": "Leather Wallet Brown Style",
+            "category": "Luxury",
+            "image": "images/items/5.jpg",
+            "price": "23"
+        },{
+            "name": "Sofa for Minimalist Interior",
+            "category": "Interior",
+            "image": "images/items/6.jpg",
+            "price": "24"
+        },{
+            "name": "Amazing watch comes here",
+            "category": "Electronics",
+            "image": "images/items/7.jpg",
+            "price": "25"
+        }
+    ],
+    "categories":[
+        {
+            "name": "Clothes"
+        },
+        {
+            "name": "Interior"
+        },
+        {
+            "name": "Luxury"
+        },
+        {
+            "name": "Electronics"
+        }
+    ]
+}
