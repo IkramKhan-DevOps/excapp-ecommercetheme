@@ -78,9 +78,6 @@
         <p class="text-muted"> &copy 2022 Holland EC, All rights reserved </p>
       </section>
     </div>
-    <section class="mt-5" id="domTree">
-
-    </section>
   </footer>
   <!-- ========================= FOOTER END // ========================= -->
 
@@ -92,11 +89,6 @@
 <script>
 
   $(document).ready(function () {
-    
-    let domTree = $('#domTree');
-    let children = $('body').children()
-    domTree.text($('footer').children().css({"color": "red", "border": "2px solid red"}));
-
     $('#login').click(function () {
 
       let email = $('#email').val();

@@ -19,3 +19,5 @@ function isEmptyNullOrNoStorage(value) {
 function getStoredValue(value) {
     return window.localStorage.getItem(value)
 }
+
+
