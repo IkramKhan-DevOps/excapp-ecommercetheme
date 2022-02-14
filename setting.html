@@ -152,14 +152,9 @@
 
 
 								<div class="form-group">
-									<label>Full Address</label>
-									<textarea id="address" name="address" class="form-control"></textarea>
-								</div>
-
-								<div class="form-group">
 									<button id="register" name="register" type="button"
 										class="btn btn-primary btn-block"> Update
-										</a>
+									</button>
 								</div> <!-- form-group// -->
 								<div class="form-group">
 									<label class="custom-control custom-checkbox"> <input type="checkbox"
@@ -209,6 +204,7 @@
 
 		let profile = $('#profile')
 		let error = $('#error')
+		let emailError = $('#emailError');
 		error.hide()
 
 		if (!isEmptyNullOrNoStorage('email')) {
@@ -222,52 +218,31 @@
 		let _fname = $('#fname');
 		let _lname = $('#lname');
 		let _email = $('#email');
-		let _age = $('#age');
-		let _country = $('#country');
-		let _address = $('#address');
 
 		_fname.val(getStoredValue('fname'));
 		_lname.val(getStoredValue('lname'))
 		_email.val(getStoredValue('email'));
-		_age.val(getStoredValue('age'))
-		_address.val(getStoredValue('address'))
-
-
 
 
 		let register = $('#register');
 
 		register.click(function () {
 
+
 			if (fieldsAreNotEmpty()) {
-				if (validateEmail) {
-					if (validatePassword) {
-						if (validateConfirmPassword) {
+				if (validateEmail()) {
 
-							allError.hide();
-							window.localStorage.setItem('fname', _fname.val());
-							window.localStorage.setItem('lname', _lname.val());
-							window.localStorage.setItem('email', _email.val());
-							window.localStorage.setItem('address', _address.val());
+					window.localStorage.setItem('fname', _fname.val());
+					window.localStorage.setItem('lname', _lname.val());
+					window.localStorage.setItem('email', _email.val());
 
-							alert('User registered successfully.')
+					alert('User updated successfully.')
 
-						} else {
-							alert('Password and Confirm Password Field Does not Matched.');
-							allError.show();
-						}
-					} else {
-						alert('Password must be 8 characters long contains 0-9A-Za-z@$%^$%.');
-						allError.show();
-					}
 				} else {
-					alert('Email is in-correct please follow the correct format.');
-					allError.show();
+					emailError.text('Email is in-correct please follow the correct format.');
 				}
-
 			} else {
 				alert('Please Fill all the Fields below.');
-				allError.show();
 			}
 		});
 
@@ -283,13 +258,28 @@
 
 
 		// FUNCTION: email validations.
-		function validateEmail() {                                                          
+		function validateEmail() {
 			var formatRules = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 			if (_email.val().match(formatRules)) {
 				return true
 			}
 			return false
 		}
+
+		_email.keyup(function(){
+			value = $(this).val()
+			if(validateEmail()){
+				emailError.addClass('text-success')
+				emailError.removeClass('text-danger')
+				emailError.removeClass('text-muted')
+				emailError.text('Email format correct');
+			}else{
+				emailError.addClass('text-danger')
+				emailError.removeClass('text-success')
+				emailError.removeClass('text-muted')
+				emailError.text('Email is incorrect - please follow proper format.');
+			}
+		});
 
 	})
 
