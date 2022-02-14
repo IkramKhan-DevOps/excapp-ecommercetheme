@@ -79,12 +79,10 @@ These technologies are used in projects to work properly:
 - [Javascript] - Client Side Scripts
 - [BOOTSTRAPS] - great UI boilerplate for modern web apps
 - [JQUERRY] - more easy and short js implementation
-- [SQlite3] - the embedable databases
 
 ## Installation
 
-Jokes App requires [Node.js](https://nodejs.org/en/) v10+ to run, please install nodeJS first
-Install the dependencies and devDependencies and start the server.
+No isntallations rqeuired.
 
 ```sh
 cd jokesapp
@@ -96,15 +94,7 @@ npm install md5
 #### How to run
 Open terminal and run the command below, make sure all requirements are installed previously
 ```sh
-npm start
+open index.html
 ```
-Follow to link to view your application [http://localhost:3000/](http://localhost:3000/)
 ## License
 MIT
-
-### Resources
-
-ADDRESSES -- add
-LINKS -- Login and Signup and cart
-Input Form -- profile
-Events -- add
