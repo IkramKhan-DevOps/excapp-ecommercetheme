@@ -103,3 +103,8 @@ Follow to link to view your application [http://localhost:3000/](http://localhos
 MIT
 
 ### Resources
+
+ADDRESSES -- add
+LINKS -- Login and Signup and cart
+Input Form -- profile
+Events -- add
