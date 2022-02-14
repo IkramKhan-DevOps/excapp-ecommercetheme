@@ -24,6 +24,7 @@
 	<!-- custom style -->
 	<link href="css/ui3661.css?v=2.0" rel="stylesheet" type="text/css" />
 	<link href="css/responsive3661.css?v=2.0" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/micromodal.css">
 
 	<!-- custom javascript -->
 	<script src="js/script3661.js?v=2.0" type="text/javascript"></script>
@@ -125,6 +126,9 @@
 						</ul>
 						<ul class="navbar-nav">
 							<li><a href="cart.html" class="nav-link"> <i class="fa fa-shopping-cart"></i> </a></li>
+						</ul>
+						<ul class="navbar-nav">
+							<li><a href="help.html" class="nav-link"> <i class="fa fa-clipboard-check"></i> </a></li>
 						</ul>
 						<ul class="navbar-nav">
 							<li><a onClick="printDOMTree(document.getElementById('htmlCode')); return true;"
@@ -233,6 +237,51 @@
 		</div>
 		<!-- container end.// -->
 
+		<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+			<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			  <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+				<header class="modal__header">
+				  <h2 class="modal__title" id="modal-1-title">
+					Assignment GuideLine
+				  </h2>
+				  
+				  <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content" id="modal-1-content">
+					
+				  <p>
+					Assignments has no of rules to follow, assignmnet contains about <code>10</code> pages, here are some of the <code>instructions</code> to follow.
+					
+					<ol>
+						<li>Events are placed all over the pages, <code>mouse, key and others</code> , you will experience during use.</li>
+						<li>To Check <code>DOM</code> Tree please click code button at the top right of header, <kbd>--</kbd> means comments inside html.</li>
+						<li>Information Stores in <code>JSON File</code> and <code>LocalStorage</code></li>
+					</ol>
+					<br>
+	
+					<ol>
+						<li>Prodcuts are dynamic on index page, stored in <code>JSONFile</code> Click Here to view <a class="text-primary" href="products.json"># View JSON File</a></li>
+						<li>Forms Pages here <a href="register.html" class="text-primary">Registartion Page</a> | 
+							<a href="login.html" class="text-primary">Login</a> | <a href="setting.html" class="text-primary">Settings</a>, 
+							those pages can be accessed only when you are registered</li>
+						<li>Registration <a href="register.html" class="text-primary"># View Page</a></li>
+						<li>Login <a href="login.html" class="text-primary"># View Page</a></li>
+						<li>User Profile <a href="setting.html" class="text-primary"># View Page</a></li>
+						<li>Live add information and display below <a href="register.html" class="text-primary"># View Page</a></li>
+					</ol>
+				  </p>
+				</main>
+				<footer class="modal__footer text-center">
+				  <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+				  <div class="mt-2">
+					<b id="rs" class="text-success">You are registered user.</b>
+					<b id="nrs" class="text-danger">You are not registered.</b>
+				  </div>
+				</footer>
+			  </div>
+			</div>
+		  </div>
+
 		<!-- ========================= FOOTER ========================= -->
 		<footer class="section-footer bg-secondary">
 			<div class="container">
@@ -248,6 +297,7 @@
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
 	<script src="js/my.js"></script>
 	<script src="js/myinit.js"></script>
 </body>
@@ -261,6 +311,16 @@
 
 
 		let productsList = $('#productsList');
+		MicroModal.init();
+		MicroModal.show('modal-1');
+
+		if (!isEmptyNullOrNoStorage('email')){
+			$('#rs').show()
+			$('#nrs').hide()
+		}else{
+			$('#nrs').show()
+			$('#rs').hide()
+		}
 
 
 		
